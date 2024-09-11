@@ -1,0 +1,5 @@
+div {
+    border: 1px solid silver;
+    margin: 8px 0; /*Aussenabstand oben/unten 8px*/
+    padding: 4px; /*innenabstand überall 8px*/
+}

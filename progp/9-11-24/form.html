@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML-Formular</title>
+    <!-- wenn man in eine andere datei machen. UNWICHTIG GERADE -> <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        div {
+            border: 1px solid silver;
+            margin: 8px 0; /*Aussenabstand oben/unten 8px*/
+            padding: 4px; /*innenabstand überall 8px*/
+            background-color: lightgray;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- form.tm-->
+    <h1>HTML-Formular</h1>
+    <h2>Inputfeld</h2>
+    <form action="">
+        <!-- div -> division ist ein container-->
+        <div>
+            <label for="user_vorname">Vorname: </label>
+            <input id="user_vorname" type="text" name="vorname">
+            <!-- /\ tpye = "text" ist default - kann wegfallen /\}-->
+        </div>
+        <div>
+            <label for="user_nachname">Nachname: </label>
+            <input id="user_nachname" type="text" name="nachname">
+        </div>
+        <button>Ab damit</button>
+    </form>
+</body>
+
+</html>
