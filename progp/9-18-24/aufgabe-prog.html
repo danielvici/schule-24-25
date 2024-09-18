@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-Formular</title>
+    <style>
+      div {
+        border: 1px solid silver;
+        margin: 4px 0; /* Aussenabstand oben/unten 4px */
+        padding: 4px; /* Innenabstand überall 4px */
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fortbildungsportal</h1>
+    <form>
+        <div>
+            <fieldset>
+                <legend>Persöhnliche Daten</legend>
+
+                <label for="usr_name">Name:</label>
+                <input type="text" name="name" id="usr_name"><br>
+
+                <label for="usr_vorname">Vorame:</label>
+                <input type="text" name="vorname" id="usr_vorname"><br>
+
+                <label for="usr_personalnr">Personalnummer*:</label>
+                <input type="text" name="personalnr" id="usr_personalnr" pattern="[0-9]{9}" placeholder="9912345239"> <br>
+
+                <label for="usr_abteil">Abteilungszugehörigkeit</label>
+                <select id="usr_abteil" name="abteilungszugehörigkeit">
+                    <option>Einkauf (EK)</option>
+                    <option>Technick (TE)</option>
+                    <option>Entwicklung (EW)</option>
+                    <option>Verwaltung (VW)</option>
+                </select>
+
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Fortbildungsangaben</legend>
+
+                <label for="usr_fortbildung_id">Fortbildungs-ID*:</label>
+                <input type="text" name="fortbildungs_id" id="usr_fortbildung_id"><br>
+
+                <label for="usr_fortbildungs-id_date">Vorame:</label>
+                <input type="date" name="fortbildungs-id_date" id="usr_fortbildungs-id_date"><br>
+
+                <label>Vertretungspauschale beantragen:</label>
+
+                <input id="p_true" type="radio" name="pauschale" value="p_true">
+                <label for="p_true">Ja</label>
+
+                <input id="p_false" type="radio" name="pauschale" value="p_false">
+                <label for="p_false">Nein</label>
+
+            </fieldset>
+        </div>
+        <button>Anmelden</button>
+    </form>
+  </body>
+</html>
