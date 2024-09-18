@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-Formular</title>
+    <style>
+      div {
+        border: 1px solid silver;
+        margin: 4px 0; /* Aussenabstand oben/unten 4px */
+        padding: 4px; /* Innenabstand überall 4px */
+        background-color: lightgray;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- form.htm -->
+    <h1>HTML-Formular</h1>
+    <h2>Inputfeldeder</h2>
+    <form>
+      <div>
+        <label for="vn">Vorname: </label>
+        <input
+          id="vn"
+          name="vorname"
+          title="Bitte geben sie ihren Vorname ein!"
+        />
+        <!-- type = "text" ist default - kann entfallen -->
+      </div>
+      <div>
+        <label for="nn">Nachname:</label>
+        <input
+          id="nn"
+          name="nachname"
+          title="Bitte geben sie ihren Nachnamen ein!"
+        />
+      </div>
+      <!-- Erweiterte Attribute -->
+      <div>
+        <label for="wo">Wohnort:</label>
+        <input
+          id="wo"
+          name="Wohnort"
+          placeholder="MANNHEIM"
+          title="Bitte geben sie ihren Wohnort ein!"
+        />
+        <!--title is TOOLTIP (Hover msg)-->
+      </div>
+      <div>
+        <label for="alter">Alter:</label>
+        <input id="alter" name="alter" type="number" min="18" max="130" />
+      </div>
+      <div>
+        <label for="plz">Postleitzahl</label>
+        <input
+          id="plz"
+          name="Postleitzahl"
+          pattern="[0-9]{5}"
+          title="Nur Zahlen 0-9 mit max 5 Ziffern"
+          placeholder="12345"
+        />
+      </div>
+      <div>
+        <label for="gb">Geburtstag</label>
+        <input id="gb" name="gebdat" type="date" />
+      </div>
+      <div>
+        <label for="mail">Email:</label>
+        <input id="mail" name="email" type="email" placeholder="me@domain.de" />
+      </div>
+      <h2>Dropdown-Element</h2>
+      <div>
+        <label for="land">Land</label>
+        <select id="land" name="land">
+          <option>Land wählen...</option>
+          <option>DEUTSCHLAND</option>
+          <option>VEREINIGTE STAATEN VON AMERICA</option>
+          <option>POLEN</option>
+          <option>SCHWEIZ</option>
+          <option>RUSSLAND</option>
+        </select>
+      </div>
+      <!--
+    <div>
+        <label for="land">Land</label>
+        <input type="text" id="land" list="laender">
+
+        <datalist id="laender">
+          <option value="DEUTSCHLAND"></option>
+          <option value="VEREINIGTE STAATEN VON AMERICA"></option>
+          <option value="USA"></option>
+          <option value="POLEN"></option>
+          <option value="SCHWEIZ"></option>
+          <option value="RUSSLAND"></option>
+        </datalist>
+    </div>
+    -->
+        <h2>Radio-Buttons</h2>
+      <div>
+        <fieldset>
+          <legend>Geschlecht:</legend>
+          
+          <input id="m" type="radio" name="geschlecht" value="m">
+          <label for="m">mänlich</label><br>
+
+          <input id="w" type="radio" name="geschlecht" value="w">
+          <label for="w">weiblich</label><br>
+
+          <input id="d" type="radio" name="geschlecht" value="d">
+          <label for="d">divers</label>
+
+        </fieldset>
+      </div>
+      <h2>Checkboxen</h2>
+      <div>
+        <fieldset>
+          <legend>Hoobies:</legend>
+          
+          <input id="l" type="checkbox" name="hobbies" value="Lesen">
+          <label for="l">mänlich</label><br>
+
+          <input id="s" type="checkbox" name="hobbies" value="Schwimmen">
+          <label for="s">weiblich</label><br>
+
+          <input id="r" type="checkbox" name="hobbies" value="Radfahren">
+          <label for="r">divers</label>
+
+        </fieldset>
+      </div>
+
+      <button>Ab damit</button>
+    </form>
+  </body>
+</html>
