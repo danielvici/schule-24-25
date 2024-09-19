@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Required Input Field</title>
+    <style>
+        div {
+            margin: 3px 0; /* Aussenabstand oben/unten 3px */
+            padding: 3px; /* Innenabstand überall 3px */
+        }
+    </style>
+</head>
+<body>
+    <h1>E-Bike Akku-Prüfung</h1>
+    <h2>Prüfprotokoll</h2>
+    <label>Es müssen alle Felder ausgefüllt werden!</label>
+
+    <form action="submit.html">
+        <div>
+            <fieldset>
+                <legend>Service-Mitarbeiter</legend>
+                <div>
+                    <label for="emp_code">Mitarbeiter Kürzel:</label>
+                    <input type="text" id="emp_code" name="employee-code" required pattern="[A-Z]{3}" title="Nur Dreibuchstaben (A-Z)">
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Akkudaten</legend>
+                <div>
+                    <label for="bike_id">Fahrzeug-ID:</label>
+                    <input type="text" id="bike_id" name="fahrzeug-id" required pattern="[0-9]{13}" placeholder="1234567891234" title="Die ID ist 13 Ziffern lang.">
+                </div>
+                <div>
+                    <label for="akku_art">Art: </label>
+                    <select name="akku-art" id="akku_art" required size="4">
+                        <option value="lion">Li-Ion</option>
+                        <option value="nimh">NiMH</option>
+                        <option value="nicad">NiCAD</option>
+                        <option value="blei">Blei</option>
+                    </select>
+                </div>
+                <div aria-required="true">
+                    <label>Aufbau:</label>
+
+                    <input type="radio" name="aufbau-art" id="gepaeck" required>
+                    <label for="gepaeck">Gepäckträger</label>
+
+                    <input type="radio" name="aufbau-art" id="rahmen" required>
+                    <label for="rahmen">Rahmen</label>
+
+                    <input type="radio" name="aufbau-art" id="intube" required>
+                    <label for="intube">Intube</label>
+                </div>
+                <div>
+                    <label for="akku_status">Akku Leistung (in %):</label>
+                    <input type="number" id="akku_status" name="akku-status" required min="0" max="100" title="Nur Zahlen von 1 - 100">
+                </div>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Sonstiges</legend>
+
+                <div>
+                    <label for="pruef_date">Prüfdatum:</label>
+                    <input type="date" id="pruef_date" name="pruef-datum" required>
+                </div>
+
+                <div>
+                    <label for="bike_info">Bemerkung</label>
+                    <textarea name="bmrk" id="bike_info" cols="50" rows="5" required></textarea>">
+                </div>
+                <div>
+                    <input type="checkbox" name="daten-korrekt-bst" id="data-correct" required>
+                    <label for="data-correct">Richtigkeit der Daten bestätigt</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <button type="submit">Senden</button>
+    </form>
+</body>
+</html>
