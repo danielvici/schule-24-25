@@ -10,14 +10,18 @@ void setup() {
 // ***** Endlosschleife ***************************************************
 void loop() {
   if (digitalRead(Taster_L) == false) {  // low-aktiv, daher false
-    digitalWrite(LED_rot, LOW);          // LED EINschalten
+    digitalWrite(LED_rot, LOW);          // LED einschalten
+    delay(100);
   } else {
-    digitalWrite(LED_rot, HIGH);  // LED AUSschalten nicht
-  }                               // vergessen! 
+    digitalWrite(LED_rot, HIGH);  // LED auschalten wenn Taster_L nicht gedrückt wird
+    delay(100);
+  }                              
   
-  if (digitalRead(Taster_R) == false) {  // low-aktiv, daher false
-    digitalWrite(LED_gruen, LOW);          // LED EINschalten
+  if (digitalRead(Taster_R) == false) {
+    digitalWrite(LED_gruen, LOW); // LED einschalten wenn Taster_R gedrückt wird
+    delay(100); 
   } else {
-    digitalWrite(LED_gruen, HIGH);  // LED AUSschalten nicht
+    digitalWrite(LED_gruen, HIGH); // LED auschalten wenn Taster_R nicht gedrückt wird
+    delay(100); 
   }    
 }
