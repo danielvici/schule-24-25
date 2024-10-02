@@ -1,0 +1,46 @@
+body {
+    background-color: cornflowerblue;
+    margin: 2px;
+    font-family: Arial, sans-serif;
+}
+button {
+    color: white;
+    background-color: cornflowerblue;
+    border-radius: 24px;
+    border: 2px solid black;
+    height: 50px;
+    width: 90px;
+    text-align: center;
+}
+button:hover{
+    background-color: white;
+    color: cornflowerblue;
+    cursor: pointer;
+    height: 57px;
+    width: 98px;
+}
+input {
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 24px;
+}
+.main {
+    border: 5px;
+    border-style: dashed;
+    border-color: black;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-radius: 24px;
+    margin-top: 10px;
+}
+.drinne {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
