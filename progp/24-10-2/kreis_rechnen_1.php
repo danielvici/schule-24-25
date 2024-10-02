@@ -14,9 +14,9 @@
             $radius= $_REQUEST['radius'];
             $flaeche = M_PI * ($radius * $radius);
             $umfang = 2 * M_PI * $radius;
-            echo "<p>Der <label class='drinne'>Kreisradius</label> beträgt: <label class='drinne'>". $radius. "</label> cm. </p>";
-            echo "<p>Der <label class='drinne'>Kreisfläche</label> beträgt: <label class='drinne'>". $flaeche ."</label> cm². </p>";
-            echo "<p>Der <label class='drinne'>Kreisumfang</label> beträgt: <label class='drinne'>". $umfang ."</label> cm. </p>";
+            echo "<p>Der <label class='dr'>Kreisradius</label> beträgt: <label class='dr'>". $radius. "</label> cm. </p>";
+            echo "<p>Der <label class='dr'>Kreisfläche</label> beträgt: <label class='dr'>". $flaeche ."</label> cm². </p>";
+            echo "<p>Der <label class='dr'>Kreisumfang</label> beträgt: <label class='dr'>". $umfang ."</label> cm. </p>";
 
         ?>
         <div>
