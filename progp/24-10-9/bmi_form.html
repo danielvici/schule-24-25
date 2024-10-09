@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Rechner</title>
+    <style>
+      .unterdiv {
+        /*border: 1px solid silver;
+        margin: 4px 0; Aussenabstand oben/unten 4px */
+        padding: 4px; /* Innenabstand überall 4px */
+        background-color: lightgray;
+      }
+      label {
+        display: inline-block;
+        width: flex;
+      } 
+    </style>
+</head>
+<body>
+    <h1>BMI - Body Mass Index</h1>
+    <h2>Daten Eingabe</h2>
+    <form action="bmi.php">
+    <div>
+        <div class="unterdiv">
+            <label for="gw">Gewicht in kg:  </label>
+            <input 
+                id="gw" 
+                name="gewicht" 
+                title="Bitte geben sie ihr Geewicht in kg ohne Kommastellen ein!"
+                placeholder="99"
+                type="number"
+                min="20"
+                max="700"
+                required
+            >
+        </div>
+        <div class="unterdiv">
+            <label for="gr">Größe in cm:</label>
+            <input 
+            id="gr" 
+            name="groesse" 
+            title="Bitte geben sie ihre Größe in cm ohne Kommastellen ein!"
+            placeholder="180"
+            min="100"
+            max="250"
+            type="number"
+            required
+            />
+        </div>
+
+        <button>BMI berechnen</button>
+    </form>
+</body>
+</html>
