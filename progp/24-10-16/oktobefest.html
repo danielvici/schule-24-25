@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkoholspiegel</title>
+    <link rel="stylesheet" href="..\css\blau-theme.css">
+    <script src="rechner.js" defer></script>
+</head>
+<body class="main">
+    <div><h1>Rechner</h1></div>
+    
+    <!-- PHP FORM -->
+    <fieldset class="main2">
+        <h2>PHP</h2>
+        <form action="rechner.php">
+            <div>
+                <label for="getraenk_anzahl_php">Wie viel Bierkruge wurden getrunken (je 1L)? </label><br><br>
+                <input type="number" id="getraenk_anzahl_php" name="anzahl_getrunken" required><br><br>
+            </div>
+            <div>
+                <input type="radio" id="male_php" name="usr_sex" value="sex_male" required>
+                <label for="male_php">Männlich</label><br><br>
+                <input type="radio" id="female_php" name="usr_sex" value="sex_female" required>
+                <label for="female_php">Weiblich</label><br><br>
+            </div>
+            <div>
+                <label for="usr_gewicht_php">Ihr Gewicht? </label>
+                <input type="number" name="gewicht" id="usr_gewicht_php" required><br>
+            </div>
+
+            <button type="submit">BERECHNEN</button>
+        </form>
+    </fieldset>
+
+    <!-- JAVASCRIPT FORM -->
+    <fieldset class="main2">
+        <h2>JAVASCRIPT</h2>
+        <p>Das Ergebnis ist weiter unten.</p>
+        <form id="calcFieldset">
+            <div>
+                <label for="getraenk_anzahl_js">Wie viel Bierkruge wurden getrunken (je 1L)? </label><br><br>
+                <input type="number" id="getraenk_anzahl_js" name="anzahl_getrunken" required><br><br>
+            </div>
+            <div>
+                <input type="radio" id="male_js" name="usr_sex_js" value="sex_male" required>
+                <label for="male_js">Männlich</label><br><br>
+                <input type="radio" id="female_js" name="usr_sex_js" value="sex_female" required>
+                <label for="female_js">Weiblich</label><br><br>
+            </div>
+            <div>
+                <label for="usr_gewicht_js">Ihr Gewicht? </label>
+                <input type="number" name="gewicht_js" id="usr_gewicht_js" required><br>
+            </div>
+
+            <button id="calculateBtn" type="submit">BERECHNEN</button><br>
+        </form>
+    </fieldset>
+
+    <div>
+        <h2>Hier ist das Ergebnis</h2>
+        <p class="result"> </p><br>
+    </div>
+
+    <footer>
+        <p>Gemacht von Daniel.</p>
+    </footer>
+</body>
+</html>
