@@ -34,6 +34,9 @@
                 case 6:
                     $englisch_msg = "Ungenügend";
                     break;
+                default:
+                    $englisch_msg = "Unbekannt";
+                    break;
             }
 
             switch ($deutsch){
@@ -54,6 +57,9 @@
                     break;
                 case 6:
                     $deutsch_msg = "Ungenügend";
+                    break;
+                default:
+                    $deutsch_msg = "Unbekannt";
                     break;
             }
 
@@ -76,12 +82,19 @@
                 case 6:
                     $mathe_msg = "Ungenügend";
                     break;
+                default:
+                    $mathe_msg = "Unbekannt";
+                    break;
             }
 
-        echo "Die Leistung in Englisch ist ". $englisch_msg . ".<br>";
-        echo "Die Leistung in Deutsch ist ". $deutsch_msg . ".<br>";
-        echo "Die Leistung in Mathe ist ". $mathe_msg . ".<br><br>";
-        echo "Der Durchschnitt der Noten beträgt: ". $durchschnitt. ".<br>";
+        if ($mathe_msg == "Unbekannt" or $deutsch_msg == "Unbekannt" or $englisch_msg == "Unbekannt"){
+            echo "Es sind unbekannte Noten gegeben.<br>";
+        } else {
+            echo "Die Leistung in Englisch ist ". $englisch_msg . ".<br>";
+            echo "Die Leistung in Deutsch ist ". $deutsch_msg . ".<br>";
+            echo "Die Leistung in Mathe ist ". $mathe_msg . ".<br><br>";
+            echo "Der Durchschnitt der Noten beträgt: ". $durchschnitt. ".<br>";
+        }
         ?>
     </div>
 </body>
