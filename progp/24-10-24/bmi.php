@@ -111,7 +111,7 @@
             $i=0;
 
             if ($groesse == 0){
-                echo "<p style='color:red;'>KEINE ZAHL ANGEBEN</p><br>";
+                echo "<p style='color:#000000;'>KEINE ZAHL ANGEBEN</p><br>";
             } else {
                 echo "<h2>BMI - Berechnungsergebnisse</h2>";
                 echo "Körpergröße: <strong>".$groesse." cm</strong><br><br>";
