@@ -6,91 +6,121 @@
     <title>Document</title>
     <style>
         * {
-            border: 1px solid black;
-            background-color: aliceblue;
+            font-family: Arial, sans-serif;
         }
+        table {
+            border: 5px solid black;
+        }
+        .normal {
+            background-color: orange;
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+        .fhr {
+            background-color: blueviolet;
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+        .info {
+            background-color: aliceblue;
+            padding: 5px;
+        }
+        .keineschule {
+            background-color: lightskyblue;
+            width: 70px;
+        
+        }
+        .unterline, .bb {
+            border-bottom: 1px solid black;
+        }
+        .br {
+            border-right: 1px solid black;
+        }
+
     </style>
 </head>
 <body>
-    <table >
+    <table>
         <tr>
-            <th style="background-color: aliceblue;">Tag -><br> Stunde\/</th> <!-- STUNDE -->
-            <th style="background-color: aliceblue;">Mo</th>
-            <th style="background-color: aliceblue;">Di</th>
-            <th style="background-color: aliceblue;">Mi</th>
-            <th style="background-color: aliceblue;">Do</th>
-            <th style="background-color: aliceblue;">Fr</th>
+            <th class="info">Tag -><br> Stunde\/</th>
+            <th class="info bb">Mo</th>
+            <th class="info bb">Di</th>
+            <th class="info bb">Mi</th>
+            <th class="info bb">Do</th>
+            <th class="info bb">Fr</th>
+            <th class="info bb">Sa</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">1</th> <!-- STUNDE -->
-            <th>-----</th> <!-- MONTAG-->
-            <th style="background-color: blueviolet;">M-FHR</th> <!-- DIENSTAG-->
-            <th>------</th> <!-- MITTWOCH-->
-            <th style="background-color: orange;">KOM</th> <!-- DONNERSTAG-->
-            <th style="background-color: orange;">GK-WP</th> <!-- FREITAG-->
+            <th class="info br">1</th>
+            <th class="unterline">-----</th>
+            <th class="fhr">M-FHR</th>
+            <th>------</th>
+            <th class="normal">KOM</th>
+            <th class="normal">GK-WP</th>
+            <th rowspan="10" class="keineschule"> </th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">2</th>
+            <th class="info br">2</th>
+            <th class="unterline">-----</th>
+            <th class="normal">KOM</th>
+            <th class="normal">E</th>
+            <th class="normal">KOM</th>
+            <th class="normal">GK-WP</th>
+        </tr>
+        <tr>
+            <th class="info br">3</th>
             <th>-----</th>
-            <th style="background-color: orange;">KOM</th>
-            <th style="background-color: orange;">E</th>
-            <th style="background-color: orange;">KOM</th>
-            <th style="background-color: orange;">GK-WP</th>
+            <th class="normal">KOM</th>
+            <th class="normal">AM-WP</th>
+            <th class="normal">PROG</th>
+            <th class="normal">KOMP</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">3</th>
-            <th>-----</th>
-            <th style="background-color: orange;">KOM</th>
-            <th style="background-color: orange;">AM-WP</th>
-            <th style="background-color: orange;">PROG</th>
-            <th style="background-color: orange;">KOMP</th>
+            <th class="info br">4</th>
+            <th class="normal">REL</th>
+            <th class="normal">INF</th>
+            <th class="normal">PROGP</th>
+            <th class="normal">PROG</th>
+            <th class="normal">INFP</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">4</th>
-            <th>REL</th>
-            <th>INF</th>
-            <th>PROGP</th>
-            <th>PROG</th>
-            <th>INFP</th>
+            <th class="info br">5</th>
+            <th class="normal">KOMP</th>
+            <th class="normal">INF</th>
+            <th class="normal">PROGP</th>
+            <th class="normal">D</th>
+            <th class="normal">INFP</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">5</th>
-            <th>KOMP</th>
-            <th>INF</th>
-            <th>PROGP</th>
-            <th>D</th>
-            <th>INFP</th>
+            <th class="info br">6</th>
+            <th class="normal">KOMP</th>
+            <th class="normal">INF</th>
+            <th class="normal">PROGP</th>
+            <th class="normal">KOMP</th>
+            <th class="normal">INFP</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">6</th>
-            <th>KOMP</th>
-            <th>INF</th>
-            <th>PROGP</th>
-            <th>KOMP</th>
-            <th>INFP</th>
+            <th class="info br">7</th>
+            <th class="normal">RO-WP</th>
+            <th class="normal">AM-WP</th>
+            <th class="normal">PROG</th>
+            <th class="normal">WI</th>
+            <th class="unterline">------</th>
         </tr>
         <tr>
-            <th style="background-color: aliceblue;">7</th>
-            <th>RO-WP</th>
-            <th>AM-WP</th>
-            <th>PROG</th>
-            <th>WI</th>
+            <th class="info br">8</th>
+            <th class="normal">RO-WP</th>
+            <th class="fhr">E-FHR</th>
+            <th class="fhr">M-FHR</th>
+            <th class="normal">WI</th>
+            <th class="unterline">------</th>
+        </tr>
+        <tr>
+            <th class="info br">9</th>
+            <th class="fhr">D-FHR</th>
             <th>------</th>
-        </tr>
-        <tr>
-            <th style="background-color: aliceblue;">8</th>
-            <th>RO-WP</th>
-            <th style="background-color: blueviolet;">E-FHR</th>
-            <th style="background-color: blueviolet;">M-FHR</th>
-            <th>WI</th>
-            <th>------</th>
-        </tr>
-        <tr>
-            <th style="background-color: aliceblue;">8</th>
-            <th style="background-color: blueviolet;">D-FHR</th>
-            <th>------</th>
-            <th style="background-color: blueviolet;">E-FHR</th>
-            <th style="background-color: blueviolet;">D-FHR</th>
+            <th class="fhr">E-FHR</th>
+            <th class="fhr">D-FHR</th>
             <th>------</th>
         </tr>
     </table>
