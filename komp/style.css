@@ -1,0 +1,152 @@
+.bild-150x100 {
+    width: 150px;
+    height: 100px;
+}
+.text-gruen {
+    color: #34ff34;
+}
+.text-allign-middle{
+    text-align: center;
+}
+.text-bold {
+    font-weight: bold;
+}
+.p-10 {
+    padding: 10px;
+}
+.li-abstand {
+    margin-bottom: 10px;
+}
+
+* {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+div {
+    padding: 15px;
+}
+#div1{
+    background-color: aqua;
+}
+#div2{
+    background-color: bisque;
+}
+#div3{
+    background-color: lightpink;
+}
+header {
+    background-color: royalblue;
+    color: darkred;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+nav a { /* a wird nur in nav geändert */
+    text-decoration: none;
+    padding: 14px 16px;
+    margin: 5px;
+    background: greenyellow;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+nav li {
+    display: inline-block;
+}
+nav {
+    background-color: gray;
+}
+.aktiv {
+    background-color: gray;
+}
+.listen-h1 {
+    color: lawngreen;
+}
+table, td {
+    border: 2px black solid;
+    padding: 5px;
+    align-items: flex;
+
+}
+.normal {
+    background-color: orange;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+.fhr {
+    background-color: blueviolet;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+.info {
+    background-color: aliceblue;
+    padding: 5px;
+}
+.keineschule {
+    background-color: lightskyblue;
+    width: 70px;
+
+}
+.unterline, .bb {
+    border-bottom: 1px solid black;
+}
+.br {
+    border-right: 1px solid black;
+}
+td{
+    border:black 1px solid;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+  }
+  th{
+    border:black 1px solid;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:10px 5px;
+  }
+  .hw{
+    border-collapse:collapse;
+    border-spacing:0;
+
+    background-color:#34ff34;
+    border-color:black;
+    text-align:center;
+    vertical-align:top
+  }
+  .eins{
+    border-collapse:collapse;
+    border-spacing:0;
+
+    background-color:#9698ed;
+    border-color:black;
+    text-align:center;
+  }
+  .b{
+    border-collapse:collapse;
+    border-spacing:0;
+
+    background-color:#dae8fc;
+    border-color:black;
+    text-align:center;
+  }
+  .bki21{
+    border-collapse:collapse;
+    border-spacing:0;
+
+    background-color:#f8a102;
+    border-color:black;
+    text-align:center;
+    vertical-align:top
+  }
+  .O{
+    border-collapse:collapse;
+    border-spacing:0;
+    
+    background-color:#00d2cb;
+    border-color:black;
+    text-align:center;
+    vertical-align:top
+  }
