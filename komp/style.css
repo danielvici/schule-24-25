@@ -51,6 +51,14 @@ nav a { /* a wird nur in nav geändert */
     flex: 1;
     align-items: center;
 }
+
+@media screen and (max-width: 400px) {
+    nav a {
+        background-color: greenyellow;  /* Buttonfarbe auf grün ändern */
+        color: red;            /* Textfarbe ändern */
+    }
+}
+
 nav li {
     display: inline-block;
 }
