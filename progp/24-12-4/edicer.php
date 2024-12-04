@@ -31,7 +31,7 @@
         <input type="number" min="1" name="anzahl_wuerfel"><br>
         <button type="submit">Würfel</button>
     </form>
-    <label>(Die Ergebnisse werden sortiert wie folgt sortiert: Klein >> Groß</label>
+    <label>Die Ergebnisse werden sortiert wie folgt sortiert: Klein >> Groß</label>
     <h1>-----------------------------</h1>
     <div class="board">
     <?php 
