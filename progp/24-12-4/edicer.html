@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eDicer</title>
+    <style>
+        /* Allgemeine Reset-Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hintergrundfarbe und allgemeines Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #007BFF;
+}
+
+header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Formular Styling */
+.form-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* Ergebnis Styling */
+.ergebnisse {
+    text-align: center;
+}
+
+#ergebnis {
+    font-size: 20px;
+    color: #007BFF;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/* Styling für die Würfelergebnisse */
+.w {
+    width: 50px;
+    margin: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+footer p {
+    font-style: italic;
+}
+    </style>
+</head>
+<body>
+    <form id="eingabe_wuerfel">
+        <label>Wie oft soll geworfen werden?</label>
+        <input type="number" id="anzahl_wuerfel" min="1" name="anzahl_wuerfel"><br>
+        <button type="submit" id="submit_eingabe">Würfeln</button><br>
+    </form>
+
+    <label id="ergebnis"></label>
+
+    <script src="edicer.js" type="text/javascript"></script>
+</body>
+</html>
