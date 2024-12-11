@@ -23,4 +23,6 @@ echo "<h1>Ausgabe von key und value mit einer Schleife</h1>";
 // Ausgabe von key und value mit einer Schleife
 foreach($anwesenheit as $key => $value)
 echo $key." ".$value."<br>";
+
+// Ausgaben von values
 ?>
