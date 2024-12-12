@@ -21,7 +21,6 @@
             background-color: lightgray;
         }
         nav a {
-            display: inline-block;
             text-decoration: none;
         }
         nav li{
@@ -36,11 +35,10 @@
             width: 250px;
             height: 200px;
             margin: 10px;
+            float: left;
+            border-radius: 50px;
         }
-        .bild-neben_text{
-            display: flex;
-            text-decoration: none;
-        }
+       
         .bg-blau {
             background-color: lightblue;
         }
@@ -50,7 +48,7 @@
         }
         table td {
             border: 1px solid black;
-            min-width: auto;
+            min-width: 100px;
             
         }
         footer {
@@ -58,6 +56,25 @@
             background-color: darkblue;
             color: white;
             text-align: right;
+        }
+        @media (max-width: 400px) {
+        nav ul{
+            flex-direction: column;
+            display: flex;
+           
+            }
+        table {
+            width: 100%;
+        }
+        }
+        .link {
+            color: rgb(0, 0,0);
+            font-weight: bold;
+            box-shadow: 0px 0px 17px 10px white;
+            background-color: white;
+            padding: 5px;
+            border-radius: 25px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -82,7 +99,10 @@
                 <p>Son Goku (孫悟空 Son Gokū), born Kakarot (カカロット Kakarotto), is a Saiyan raised on Earth and the main protagonist of the Dragon Ball series. He is the second-born son and youngest child of Bardock and Gine, the husband of Chi-Chi, and the father of Gohan and Goten. Originally sent to Earth by his parents as an infant, Kakarot was adopted by Grandpa Gohan and renamed Son Goku. A head injury at an early age altered Goku's memory, ridding him of his initial destructive nature and allowing him to grow up to become one of Earth's greatest defenders. Goku constantly strives and trains to be the greatest warrior that he can possibly be, which has kept the Earth and the universe safe from destruction multiple times</p>
             </div>
         </div>
-        <div>
+        <br>
+        <br>
+        <br>
+        <div class="header">
             <h2>Notentabelle</h2>
             <table>
                 <tr>
@@ -125,6 +145,7 @@
     <footer>
         <h2>Daniel C.</h2>
         <p>COPYRIGHT © 2024</p>
+        <p><a href="https://github.com/danielvici" class="link">GitHub</a></p>
     </footer>
 </body>
 </html>
