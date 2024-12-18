@@ -111,7 +111,7 @@
             <a class="wuerfeln" href="edicer-functions.php">Würfeln</a><br>
             <div class="info">
                 <p class="kleine_info">Die Ergebnisse werden sortiert wie folgt sortiert: Klein >> Groß</p>
-                <p class="kleine_info">powered by Daniel</p>
+                <p class="kleine_info">powered by <a href="https://danielvici.de">Daniel</a></p>
             </div>
         </div>
     </div>
@@ -147,7 +147,12 @@
     echo "<h2> Die Summe der Augenzahlen beträgt $summe </h2>";
     echo "</div>";
     echo "<div class='gewinn'>";
-    echo "<pre>".auswerten($augen_array)."</pre>";
+
+    $auswertung = (auswerten($augen_array));
+    echo "<p>$auswertung[0]</p>";
+    echo "<p>Ihr Gewinn beträgt $auswertung[1] €</p>";
+    
+    
     echo "</div>";
 
 // GEWINN ERMITTELN
