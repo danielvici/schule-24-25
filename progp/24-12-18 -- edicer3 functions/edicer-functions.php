@@ -147,22 +147,22 @@
     echo "<h2> Die Summe der Augenzahlen beträgt $summe </h2>";
     echo "</div>";
     echo "<div class='gewinn'>";
-    auswerten($augen_array);
+    echo "<pre>".auswerten($augen_array)."</pre>";
     echo "</div>";
 
 // GEWINN ERMITTELN
     function  auswerten ($augen_arr){
 
         $gewin_stufen = [
-            0 => ["kein gewinn", 0],
-            1 => ["Zweier Pasch", 1],
-            2 => ["Doppel zweierpasch", 2],
-            3 => ["Dreierpasch", 3], // 15%
-            4 => ["kleine straße", ], // 14%
-            5 => ["Full House", 10], // 4%
-            6 => ["große straße", 100], //3%
-            7 => ["Viererpasch", 10], // 2%
-            8 => ["Kniffel", 1000], // 0.1%
+            0 => ["<h1>❌ KEIN GEWINN.❌</h1><br><h2>:( </h2>", 0],
+            1 => ["<h1>2️⃣ ZWEIERPASCH :/ 🆗</h1>", 1],
+            2 => ["<h1>2️⃣ DOPPEL ZWEIERPASCH </h1>", 2],
+            3 => ["<h1>3️⃣ DREIERPASCH :) 🎉</h1>", 3], // 15%
+            4 => ["kleine straße", 5], // 14%
+            5 => ["<h1>3️⃣ FULL HOUSE :) 🎉</h1>", 10], // 4%
+            6 => ["große straße", 15], //3%
+            7 => ["<h1>4️⃣ VIERERPASCH :) 🎉</h1>", 20], // 2%
+            8 => ["<h1>🎉 KNIFFEL! :) 🎉</h1><br><h2>5️⃣</h2>", 100], // 0.1%
         ];
 
 
@@ -171,32 +171,39 @@
         sort($haeufigkeit);
     // KNIFFEL
         if (count(array_unique($augen_arr))==1){ // Fünf gleiche Zahlen = Kniffel
-            return "<h1>🎉 KNIFFEL! :) 🎉</h1><br><h2>5️⃣</h2>";
+            return $gewin_stufen[8];
         }
         // VIERERPASCH
         elseif ($haeufigkeit === [1,4]){ // das geht auch um 3 gleiche zu bekommen
-            return "<h1>4️⃣ VIERERPASCH :) 🎉</h1>";
+            return $gewin_stufen[7];
+        }
+        // GROßE STRASSE
+        elseif ($haeufigkeit == [1,1,1,1,1]){
+            return $gewin_stufen[6];
         }
         // FULL HOUSE
         elseif ($haeufigkeit === [2,3]) { 
-            return "<h1>3️⃣ FULL HOUSE :) 🎉</h1>";
+            return $gewin_stufen[5];
+        }
+        // KLEINE STRASS
+        elseif ($haeufigkeit == [1,1,1,1,1]){
+            return $gewin_stufen[4];
         }
         // DREIERPASCH
         elseif ($haeufigkeit === [1,1,3]) { 
-            return "<h1>3️⃣ DREIERPASCH :) 🎉</h1>";
+            return $gewin_stufen[3];
         }
         // DOPPEL ZWEIERPASCH
         elseif ($haeufigkeit === [1,2,2]) { 
-            return "<h1>2️⃣ DOPPEL ZWEIERPASCH </h1>";
+            return $gewin_stufen[2];
         }
         // ZWEIERPASCH
         elseif ($haeufigkeit === [1,1,1,2]) { 
-            return "<h1>2️⃣ ZWEIERPASCH :/ 🆗</h1>";
+            return $gewin_stufen[1];
         }
         // KEIN GEWINN
         else{
-            return "<h1>❌ KEIN GEWINN.❌</h1><br><h2>:( </h2>";
-    
+            return $gewin_stufen[0];
         }
     }
     ?>
