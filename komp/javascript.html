@@ -1,13 +1,23 @@
 <html>
 <head>
 <title> JavaScript Beispiel </title>
+<style>
+    * {
+        border: 1px solid black;
+    }
+</style>
 <script type="text/javascript">
     function main(){
-        document.writeln("Hallo Welt!<p>");
+        document.write("<table>");
+        document.write("<tr><td> Quadratzahl </td> <td> Wurzel </td></tr>")
+        for(var i = 0; i < 100; i++){
+                document.write("<tr><td>" + i*i + "</td> <td>" + Math.sqrt(i) + "</td></tr><br>");
+        }
+        document.write("</table>");
     }
 </script>
 </head>
 <body onload="main();">
-<noscript> JavaScript ist nicht eingeschaltet </noscript>
+
 </body>
 </html>
