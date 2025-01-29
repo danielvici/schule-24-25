@@ -142,6 +142,8 @@ $_SESSION['kontostand'] += $auswertung[1];
 .kleine_info{
     font-style: italic;
     text-align: center;
+}
+.kleine_info_2{
     display: flex;
     justify-content: center;
 }
@@ -167,8 +169,8 @@ $_SESSION['kontostand'] += $auswertung[1];
             <h1 class="ueberschrift">E DICER</h1><br>
             <a class="wuerfeln" href="edicer-4.php">Würfeln</a><br>
             <div class="info">
-                <p class="kleine_info">Jeder Wurf kostet 1€</p>|
-                <p class="kleine_info">Die Ergebnisse werden sortiert wie folgt sortiert: Klein >> Groß</p><br>
+                <p class="kleine_info kleine_info_2">Jeder Wurf kostet 1€</p>
+                <p class="kleine_info kleine_info_2">Die Ergebnisse werden sortiert wie folgt sortiert: Klein >> Groß</p>
                 <p class="kleine_info">powered by <a href="https://danielvici.de">Daniel</a></p>
                 <img class="casino_bild" src="..\bilder\casino.jpeg" alt="Casino" width="450" height="200">
             </div>
