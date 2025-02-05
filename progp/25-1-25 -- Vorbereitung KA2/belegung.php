@@ -1,5 +1,5 @@
 <?php 
-function sucheMinBelegung(zimmerliste: Zimmer[], weiblich: boolean): int {
+function sucheMinBelegung($zimmerliste, $weiblich) {
     $minIndex = -1;
     $belegung = 1.0;
     $minBelegung = 1;
