@@ -1,0 +1,78 @@
+/* INFP Klassenarbeit 2025-01-17
+ * Aufgabe 1
+ * Ablaufsteuerung mit Ampel-LEDs
+ * Name: CWIKLA DANIEL
+ */
+
+const int LED_rot = 27, LED_gelb = 19, LED_gruen = 23;
+enum Zustaende_t { off, stop, blink, go } Zustand;
+
+const int Taster2 = 2, Taster4 = 4;
+bool fTaster2, fTaster4, InTaster2, InTaster4, Merker2, Merker4;
+bool rot, gelb, gruen;
+
+void setup() {
+  pinMode(Taster2, INPUT);
+  pinMode(Taster4, INPUT);
+  pinMode(LED_rot, OUTPUT);
+  pinMode(LED_gelb, OUTPUT);
+  pinMode(LED_gruen, OUTPUT);
+  
+  Serial.begin(115200);
+  Serial.println("DANIEL CWIKLA");
+
+  Zustand = off;
+}
+
+void loop() {
+  Einlesen();
+  Ablauf();
+  Ausgeben();
+}
+
+void Einlesen() {
+  InTaster2 = digitalRead(Taster2);
+  InTaster4 = digitalRead(Taster4);
+
+  fTaster2 = (InTaster2 == HIGH && Merker2 == LOW);
+  fTaster4 = (InTaster4 == HIGH && Merker4 == LOW);
+
+  Merker2 = InTaster2;
+  Merker4 = InTaster4;
+}
+
+void Ablauf() {
+  switch (Zustand) {
+    case off:
+      Serial.println("ZUSTAND: OFF");
+      if (fTaster2) Zustand = stop;
+      else if (fTaster4) Zustand = blink;
+      rot = false; gelb = false; gruen = false;
+      break;
+
+    case stop:
+      Serial.println("ZUSTAND: STOP");
+      if (fTaster2) Zustand = go;
+      rot = true; gelb = false; gruen = false;
+      break;
+
+    case go:
+      Serial.println("ZUSTAND: GO");
+      if (fTaster2) Zustand = stop;
+      else if (fTaster4) Zustand = off;
+      rot = false; gelb = false; gruen = true;
+      break;
+
+    case blink:
+      Serial.println("ZUSTAND: BLINK");
+      if (fTaster4) Zustand = off;
+      rot = false; gelb = true; gruen = false;
+      break;
+  }
+}
+
+void Ausgeben() {
+  digitalWrite(LED_rot, rot);
+  digitalWrite(LED_gelb, gelb);
+  digitalWrite(LED_gruen, gruen);
+}

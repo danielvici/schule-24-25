@@ -1,0 +1,36 @@
+/* INFP Klassenarbeit 2025-01-17
+ * Aufgabe 2
+ * Grüne LED mit PWM dimmen
+ * Name: CWIKLA DANIEL
+ */
+
+const int Taster2 = 2, Taster4 = 4, LED_gruen = 33;
+unsigned long currentMillis, lastMillis;
+float fiftypercent = 511;
+
+void setup( ) {
+  ledcAttach(LED_gruen, 125, 10); // PWM für grüne LED konfigurieren
+  pinMode(Taster2, 5);  // das funktioniert so
+  pinMode(Taster4, 5);  // da muss man nix ändern...
+
+  // PWM Anfangswert für 50%
+  ledcWrite(LED_gruen, 0);
+}
+
+void loop( ) {
+  // Zeitsteuerung ergänzen
+  currentMillis = millis(); 
+  if (currentMillis - lastMillis >= 200){
+    // Taster2 gedrückt: Wert um 100 erhöhen
+    if (digitalRead(Taster2) == HIGH){
+      fiftypercent += 100;
+    }
+    // Taster4 gedrückt: Wert um 100 verringern
+    if (digitalRead(Taster4) == HIGH){
+      fiftypercent -= 100;
+    }
+    fiftypercent  = constrain(aktueller_pwm, 0, 1023);
+    ledcWrite(LED_gruen, fiftypercent);
+    lastMillis = currentMillis;
+  }
+}
