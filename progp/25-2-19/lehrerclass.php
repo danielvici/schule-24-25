@@ -40,7 +40,7 @@ class Lehrer {
     public function ausgeben():void{
         echo "<p>Lehrer: $this->vorname</p><br>";
         echo "<p>Lehrer: $this->nachname</p><br>";
-        echo "<p>Gehaltsstufe: $this->gehaltsstufe </p><br>";
+        echo "<p>Gehaltsstufe: A$this->gehaltsstufe </p><br>";
     }
     
 
