@@ -3,19 +3,20 @@
 //
 //
 // Authors:
-// Peter Polidoro peterpolidoro@gmail.com
+// Peter Polidoro peter@polidoro.io
 // ----------------------------------------------------------------------------
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 #include <Arduino.h>
+#include <PCA9685.h>
 
 
 namespace constants
 {
-extern const uint8_t device_address;
-extern const size_t output_enable_pin;
+extern const PCA9685::DeviceAddress device_address;
+extern const PCA9685::Pin output_enable_pin;
 
 extern const size_t loop_delay;
-extern const uint16_t frequency_increment;
+extern const PCA9685::Frequency frequency_increment;
 }
 #endif
