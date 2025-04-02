@@ -3,18 +3,18 @@ ini_set("display_errors", "on");
 class mitarbeiter {
     public string $name;
     public string $geburtsdatum;
-    public string $gehalt;
+    public int $gehalt;
 
-    public function __construct(string $n, string $gb, string $g) {
+    public function __construct(string $n, string $gb, int $g) {
         $this->name = $n;
         $this->geburtsdatum = $gb;
         $this->gehalt = $g;
     }
 
     public function getInfo():void {
-        echo "Name: $this->name";
-        echo "Geburtsdatum: $this->geburtsdatum";
-        echo" Gehalt: $this->gehalt";
+        echo "Name: $this->name <br>";
+        echo "Geburtsdatum: $this->geburtsdatum <br>";
+        echo" Gehalt: $this->gehalt <br>";
     }
     public function getJahresgehalt():int {
         return $this->gehalt * 12;
@@ -23,10 +23,10 @@ class mitarbeiter {
 
 
 class vollzeit extends mitarbeiter {
-    public string $arbeitszeit = 40;
+    public int $arbeitszeit = 40;
     public int $bonus;
 
-    public function __construct(string $n, string $gb, string $g, int $b) {
+    public function __construct(string $n, string $gb, int $g, int $b) {
         parent::__construct($n, $gb, $g);
         $this->arbeitszeit = 40;
         $this->bonus = $b;
@@ -34,8 +34,8 @@ class vollzeit extends mitarbeiter {
 
     public function getInfo(): void {
         parent::getInfo();
-        echo "Arbeitszeit: $this->arbeitszeit";
-        echo "Bonus: $this->bonus";
+        echo "Arbeitszeit: $this->arbeitszeit <br>";
+        echo "Bonus: $this->bonus <br>";
     }
 
     public function getJahresgehalt():int {
@@ -46,9 +46,9 @@ class vollzeit extends mitarbeiter {
 class teilzeit extends mitarbeiter {
     public string $arbeitszeit; // h pro woche
     public int $stundenlohn = 15; // Euro pro Stunde
-    private int $gehalt = 0;
+    public int $gehalt = 0;
 
-    public function __construct(string $n, string $gb, string $g, int $hpw, int $sl) {
+    public function __construct(string $n, string $gb, int $g, int $hpw, int $sl) {
         parent::__construct($n, $gb, $g);
         $this->gehalt = $this->gehalt + ($hpw * $sl * 4); // 4 Wochen pro Monat
         $this->stundenlohn = $sl;
@@ -56,8 +56,8 @@ class teilzeit extends mitarbeiter {
 
     public function getInfo(): void {
         parent::getInfo();
-        echo "Arbeitszeit: $this->arbeitszeit";
-        echo "Stundenlohn: $this->stundenlohn";
+        echo "Arbeitszeit: $this->arbeitszeit <br>";
+        echo "Stundenlohn: $this->stundenlohn <br>";
     }
 
     public function getJahresgehalt():int {
