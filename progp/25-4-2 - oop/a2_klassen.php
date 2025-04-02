@@ -50,6 +50,7 @@ class teilzeit extends mitarbeiter {
 
     public function __construct(string $n, string $gb, int $g, int $hpw, int $sl) {
         parent::__construct($n, $gb, $g);
+        $this->arbeitszeit = $hpw;
         $this->gehalt = $this->gehalt + ($hpw * $sl * 4); // 4 Wochen pro Monat
         $this->stundenlohn = $sl;
     }
