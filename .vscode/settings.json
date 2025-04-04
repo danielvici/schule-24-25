@@ -2,5 +2,6 @@
     "livePreview.defaultPreviewPath": "/komp/24-10-11/index.html",
     "cSpell.enabledFileTypes": {
         "php": false
-    }
+    },
+    "workbench.editor.untitled.language": "fasle",
 }
